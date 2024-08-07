@@ -4,6 +4,8 @@
 
 <button (click)="add()">Add</button>
 
-<p>Sort: {{ fruits | sort }}</p>
+<p>Array: {{ fruits.join(', ') }}</p>
+
+<p>Sort: {{ fruits | sort: '-' }}</p>
 
 <p>Join: {{ fruits.join(', ') }}</p>

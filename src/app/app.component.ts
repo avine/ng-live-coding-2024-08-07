@@ -13,7 +13,7 @@ export class AppComponent {
   fruits = ['pommes', 'bananes'];
 
   add() {
-    // this.fruits.push('kiwi');
-    this.fruits = [...this.fruits, 'kiwi'];
+    this.fruits.push('kiwi');
+    //this.fruits = [...this.fruits, 'kiwi'];
   }
 }
