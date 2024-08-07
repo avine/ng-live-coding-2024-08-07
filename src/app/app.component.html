@@ -1,3 +1,15 @@
 <h1>Ng Live Coding</h1>
 
 <router-outlet />
+
+<button (click)="increment()">{{ count }}</button>
+
+<br />
+
+<button (click)="increment2()">{{ count2$ | async }}</button>
+<button (click)="increment2()">{{ count2bis }}</button>
+<button (click)="increment2()">{{ count2Ter }}</button>
+
+<br />
+
+<button (click)="increment3()">{{ count3() }}</button>
