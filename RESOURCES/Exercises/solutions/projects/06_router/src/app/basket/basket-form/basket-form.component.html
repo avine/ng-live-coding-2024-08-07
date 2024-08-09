@@ -1,0 +1,34 @@
+<form [formGroup]="formGroup">
+  <div class="mb-3">
+    <label class="form-label" for="name">Nom</label>
+
+    <input [formControl]="formGroup.controls.name" type="text" class="form-control" id="name" name="name" />
+
+    <div class="invalid-feedback">Champ obligatoire</div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="address">Adresse</label>
+
+    <textarea [formControl]="formGroup.controls.adress" class="form-control" id="address" name="address"></textarea>
+
+    <div class="invalid-feedback">Champ obligatoire</div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label" for="creditCard">Numéro de carte de crédit</label>
+
+    <input [formControl]="formGroup.controls.creditCard" class="form-control" id="creditCard" name="creditCard" />
+
+    <div class="invalid-feedback">
+      <ng-container>Champ obligatoire</ng-container>
+      <ng-container>Le numéro doit être valide (ex. 123-456)</ng-container>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success">Valider</button>
+</form>
+
+<br />
+<pre>Form value {{ formGroup.value | json }}</pre>
+<pre>Name control error {{ formGroup.controls.name.errors | json }}</pre>
