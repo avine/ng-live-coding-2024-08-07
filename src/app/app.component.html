@@ -1,3 +1,9 @@
 <h1>Ng Live Coding</h1>
 
 <router-outlet />
+
+<button (click)="increment()">Inc {{ count() }}</button>
+
+<button (click)="loadTodo()">Load todo</button>
+
+<pre>{{ todo() | json }}</pre>
