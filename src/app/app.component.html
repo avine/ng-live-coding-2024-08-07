@@ -1,3 +1,8 @@
 <h1>Ng Live Coding</h1>
 
 <router-outlet />
+
+<app-counter [(count)]="appCount" />
+<app-counter [count]="500" />
+
+{{ appCount }}
