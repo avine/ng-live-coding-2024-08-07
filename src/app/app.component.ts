@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { LazyComponent } from './lazy/lazy.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, LazyComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {}
+export class AppComponent {
+  bool = true;
+
+  fruits = [
+    { id: 1, value: 'banane' },
+    { id: 2, value: 'pomme' },
+  ];
+}

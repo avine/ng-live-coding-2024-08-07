@@ -1,3 +1,32 @@
 <h1>Ng Live Coding</h1>
 
 <router-outlet />
+
+<button (click)="bool = !bool">Toggle</button>
+
+@if (bool; as toto) {
+  Hello {{ toto ? 'ok' : 'ko' }}
+} @else {
+  OOps!
+}
+
+<ul>
+  @for (fruit of fruits; track fruit.id) {
+    <li>{{ fruit.value }}</li>
+  }
+</ul>
+
+@switch (bool) {
+  @case (true) {
+    OK
+  }
+  @default {
+    KO
+  }
+}
+
+@defer (on viewport; on timer(5s)) {
+  <app-lazy />
+} @placeholder {
+  <div>...</div>
+}
